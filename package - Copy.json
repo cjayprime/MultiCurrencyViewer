@@ -2,15 +2,13 @@
   "name": "multicurrencyviewer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://.",
+  "homepage" : ".",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "@shopify/polaris": "2.11.0",
-    "jquery": "3.3.1",
-    "mobx": "5.8.0",
-    "mobx-react": "5.4.3"
+    "jquery": "3.3.1"
   },
   "scripts": {
     "start": "set PORT=3300 && react-scripts start",
@@ -26,17 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cjayprime/MultiCurrencyViewer.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cjayprime/MultiCurrencyViewer/issues"
-  }
+  ]
 }
