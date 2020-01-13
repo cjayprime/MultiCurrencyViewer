@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link href="scripts/bootstrap-tour-standalone.min.css" rel="stylesheet">
+    <script src="scripts/jquery-1.11.1.js?shop=greyloft.myshopify.com" type="application/javascript"></script>
+    <script src="scripts/bootstrap-tour-standalone.js" type="application/javascript"></script>
+	<script>
+			$(document).ready(function(){
+				window.startTour = function(){
+					var tour = new Tour({
+						steps: [
+							{
+								element: "",
+								title: "<b>Welcome to MultiCurrency Viewer</b>",
+								content: "Please follow the guide to get you setup.",
+								placement:'left'
+							},
+							{
+								element: "#currency-frontend",
+								title: "Control how your currency appears on your store front.",
+								content: "Use this text field to change the chat social message displayed to your customers.",
+								placement:'left'
+							},
+							{
+								element: "#currency-location",
+								title: "Turn on geo-location",
+								content: "Auto-detect your customers locations and set their national/regional currency instantly.",
+								placement:'left',
+								backdropPadding:{top:3,left:4,right:-1}
+							},
+							{
+								element: "#currency-selections",
+								title: "Choose your currencies <b>(Step 1)</b>",
+								content: "Select the currencies you would like to offer in your store front, and pick a default currency that is displayed first. <br><br><b>Note: Your default currency is currently <u>"+window.MultiCurrencyViewer.defaultCurrency+'</u></b>',
+								placement:'left'
+							},
+							{
+								element: "#currency-selected",
+								title: "Choose your currencies <b>(Step 2)</b>",
+								content: "You get to see all your selections here. <br><br><b>Note: Your default currency is currently <u>"+window.MultiCurrencyViewer.defaultCurrency+'</u></b>',
+								placement:'left'
+							},
+							{
+								element: "#theme-inline",
+								title: "Style the currency within the page",
+								content: "Customize the currency to match the look and feel of your shop using this section, make sure to utilize the `Customize` button to add more styles.",
+								placement:'left'
+							},
+							{
+								element: "#theme-menu",
+								title: "Style the currency within the menu",
+								content: "Customize the currency to match the look and feel of your shop using this section, make sure to utilize the `Customize` button to add more styles.",
+								placement:'left'
+							},
+							{
+								element: "#display-inline",
+								title: "Show the original currency and value",
+								content: "Show the original price that was changed when a user places their cursor over the new price.",
+								placement:'left'
+							},
+							{
+								element: "#display-menu",
+								title: "Position the menu",
+								content: "Choose from several options to position the menu as a hovering content on the page, if you want it in your header(inline), choose `Static` and enter a css identifier(preferrably a class or id).",
+								placement:'left'
+							},
+							{
+								element: "#checkout",
+								title: "Checkout notice",
+								content: "Enter and style a custom notice that tells your customers the reasons for the differences between the currency on the product pages and the checkout page.",
+								placement:'left'
+							},
+							{
+								element: "#configuration",
+								title: "Settings configuration.",
+								content: "Follow the instructions in the images to configure your store to display the currencies.",
+								placement:'left'
+							},
+							{
+								element: ".save-buttons:not(:hidden)",
+								title: "Save your changes",
+								content: "Once you are done editing the form, click here to save changes to your chat social button.",
+								placement:'left',
+								backdrop: false
+							},
+							{
+								element: "#redirect",
+								title: "Preview your new chat button",
+								content: "Click to view your new chat social button live in action.",
+								placement:'right',
+								backdrop: false
+							},
+							{
+								element: "#support-contact",
+								title: "Contact Support",
+								content: "Click the link to email support if you have any issues with the application.",
+								placement:'left'
+							}
+						],
+						name: "multiCurrencyViewerTour",
+						smartPlacement: true,
+						storage: window.localStorage,
+						backdrop: true,
+						orphan:true
+					});
+					
+					// Initialize the tour
+					tour.init();
+					
+					// Start the tour
+					tour.start();
+				};
+				startTour();
+            });
+    </script>
+	<!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Multi-Currency Viewer</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
